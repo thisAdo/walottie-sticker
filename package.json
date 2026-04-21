@@ -1,0 +1,17 @@
+{
+  "name": "walottie-sticker",
+  "version": "1.0.0",
+  "description": "Constructor de stickers Lottie animados (.was) para WhatsApp — packs bases: Chomp (Incompleto) y Pompom (Completo)",
+  "type": "module",
+  "exports": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thisAdo/walottie-sticker"
+  },
+  "author": "thisAdo",
+  "keywords": ["whatsapp", "sticker", "lottie", "animated", "was", "baileys"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
