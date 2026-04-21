@@ -8,15 +8,14 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const TIPOS_MIME = {
-	'.png': 'image/png',
-	'.jpg': 'image/jpeg',
+	'.png':  'image/png',
+	'.jpg':  'image/jpeg',
 	'.jpeg': 'image/jpeg',
 	'.webp': 'image/webp',
 };
 
 const PACKS_DISPONIBLES = {
 	Chomp: [1],
-	Pompom: Array.from({ length: 15 }, (_, i) => i + 1),
 };
 
 class ConstructorSticker {
@@ -92,7 +91,7 @@ class ConstructorSticker {
 
 		const rutaZip = salida.replace(/\.was$/i, '.zip');
 		if (fs.existsSync(rutaZip)) fs.unlinkSync(rutaZip);
-		if (fs.existsSync(salida)) fs.unlinkSync(salida);
+		if (fs.existsSync(salida))  fs.unlinkSync(salida);
 
 		execSync(`zip -r "${rutaZip}" .`, { cwd: carpeta, stdio: 'ignore' });
 		fs.renameSync(rutaZip, salida);
@@ -104,7 +103,7 @@ class ConstructorSticker {
 		buffer,
 		rutaImagen,
 		mime,
-		salida = path.resolve('sticker.was'),
+		salida   = path.resolve('sticker.was'),
 		rutaJson = 'animation/animation_secondary.json',
 	}) {
 		if (!pack || id === undefined) {
@@ -152,4 +151,4 @@ class ConstructorSticker {
 const instancia = new ConstructorSticker();
 
 export const buildLottieSticker = opciones => instancia.construir(opciones);
-export const listPacks = () => instancia.listarPacks();
+export const listPacks          = ()        => instancia.listarPacks();
