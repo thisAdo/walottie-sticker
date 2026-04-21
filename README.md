@@ -33,7 +33,6 @@ En package.json
 | Pack | IDs |
 |------|-----|
 | `Chomp` | 1 (Incompleto) |
-| `Pompom` | 1 – 15 (Completo) |
 
 ---
 
@@ -49,8 +48,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Aquí construye el sticker animado a partir de un buffer de imagen...
 const salida = await buildLottieSticker({
-    pack: 'Pompom',   // Nombre del pack a usar
-    id: 3,            // ID del sticker dentro del pack (Pompom tiene del 1 al 15)
+    pack: 'Chomp',   // Nombre del pack a usar
+    id: 1,            // ID del sticker dentro del pack (Pompom tiene del 1 al 15)
     buffer: imagenBuffer, // Buffer de la imagen que se incrustará en la animación
     mime: 'image/jpeg', // Tipo MIME de la imagen (png, jpg/jpeg, webp etc..)
     salida: path.resolve(__dirname, 'sticker.was'), // Ruta de salida del archivo generado
